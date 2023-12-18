@@ -12,7 +12,7 @@ export default function Home() {
   },[])
   return (
    <div className="grid">
-    <Image src={}/>
+    {/* <Image src={}/> */}
    </div>
   )
 }
