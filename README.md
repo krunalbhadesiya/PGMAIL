@@ -1,3 +1,4 @@
+![localhost_3000_dashboard](https://github.com/krunalbhadesiya/pgmail/assets/126008727/84c2eeef-e1ab-4839-bd28-09977446409f)
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
