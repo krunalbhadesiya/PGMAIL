@@ -10,7 +10,7 @@ export default function DashboardLayout({
 }) {
 
   return (
-    <section className="w-full h-screen overflow-hidden" >
+    <section className="w-full h-screen overflow-visible" >
       {children}
     </section>
   )

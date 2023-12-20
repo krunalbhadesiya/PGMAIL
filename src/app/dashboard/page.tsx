@@ -8,7 +8,7 @@ export default function Page() {
     return (
       <>
         <Navbar/>
-        <div className="flex flex-row items-start align-top overflow-hidden w-full h-full">
+        <div className="flex flex- w-full h-[92%]">
           <Sidebar/>
           <Maillist/>
           <Maildata/>
