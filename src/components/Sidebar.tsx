@@ -1,60 +1,44 @@
-"use client"
-import { IconArchive, IconBuildingSkyscraper, IconCircleX, IconFile, IconMailFilled, IconSend, IconStar, IconUser } from '@tabler/icons-react'
-import { NavList } from '@primer/react'
-import React from 'react'
+"use client";
+import React from 'react';
+import { Button } from "./ui/button"
+import { IconArchive, IconBuildingSkyscraper, IconCircleX, IconFile, IconSend, IconStar, IconUser } from '@tabler/icons-react';
+
+const functionList = [
+  { name: 'Private', icon: IconUser },
+  { name: 'Work', icon: IconBuildingSkyscraper },
+];
+
+const folderList = [
+  { name: 'Sent', icon: IconSend },
+  { name: 'Drafts', icon: IconFile },
+  { name: 'Spam', icon: IconCircleX },
+  { name: 'Archive', icon: IconArchive }, // Assuming you have an IconArchive in your icon library
+  { name: 'Starred', icon: IconStar },
+];
+
 function Sidebar() {
   return (
-    <div className='h-full w-56 border-r-2'>
-      <NavList >
-        <NavList.Group title="Inbox" >
-          <NavList.Item href="#" aria-current="page">
-            <NavList.LeadingVisual>
-              <IconUser />
-            </NavList.LeadingVisual>
-            Private
-          </NavList.Item>
-          <NavList.Item href="#" aria-current="page">
-            <NavList.LeadingVisual>
-              <IconBuildingSkyscraper />
-            </NavList.LeadingVisual>
-            Work
-          </NavList.Item>
-        </NavList.Group>
-        <NavList.Group title="Foldars">
-          <NavList.Item href="">
-            <NavList.LeadingVisual>
-              <IconSend/>
-            </NavList.LeadingVisual>
-            Sent
-          </NavList.Item>
-          <NavList.Item href="">
-            <NavList.LeadingVisual>
-              <IconFile/>
-            </NavList.LeadingVisual>
-            Drafts
-          </NavList.Item>
-          <NavList.Item href="">
-            <NavList.LeadingVisual>
-              <IconCircleX/>
-            </NavList.LeadingVisual>
-            Spam
-          </NavList.Item>
-          <NavList.Item href="">
-            <NavList.LeadingVisual>
-              <IconArchive/>
-            </NavList.LeadingVisual>
-            Archive
-          </NavList.Item>
-          <NavList.Item href="">
-            <NavList.LeadingVisual>
-              <IconStar/>
-            </NavList.LeadingVisual>
-            Starred
-          </NavList.Item>
-        </NavList.Group>
-      </NavList>
+    <div className='h-full w-56 border-r-2 p-3 '>
+      <div className="">
+        <h2 className='text-[10px] mb-1'>Folders</h2>
+        {functionList.map((item, index) => (
+          <Button key={index} variant={'icon'}>
+            <item.icon />
+            <span className='ml-2'>{item.name}</span>
+          </Button>
+        ))}
+      </div>
+      <div className="">
+        <h2 className='text-[10px] mb-1'>Folders</h2>
+        {folderList.map((item, index) => (
+          <Button key={index} variant={'icon'}>
+            <item.icon />
+            <span className='ml-2'>{item.name}</span>
+          </Button>
+        ))}
+      </div>
     </div>
-  )
+  );
 }
 
-export default Sidebar
+export default Sidebar;

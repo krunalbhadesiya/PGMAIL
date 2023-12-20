@@ -3,7 +3,7 @@ import React from 'react'
 
 function Card() {
     return (
-        <div className="p-2 shadow-lg flex flex-row items-center justify-between hover:bg-slate-900 hover:border-2">
+        <div className="p-2 shadow-lg flex flex-row items-center justify-between hover:bg-card hover:border-2">
             <div className=" flex flex-col">
                 <div className="font-bold text-xs mb-1">Sender Name</div>
                 <div className="font-bold text-base mb-1">Title</div>

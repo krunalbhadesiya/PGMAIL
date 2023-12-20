@@ -3,10 +3,11 @@
 import * as React from "react"
 import logo from "@/assets/pgmaillogo.png"
 import Image from 'next/image'
-import { IconBellFilled, IconSearch, IconUserCircle, IconUserPlus } from '@tabler/icons-react'
-import { CaretSortIcon, CheckIcon } from "@radix-ui/react-icons"
-import { cn } from "@/lib/utils"
-import { Avatar, Button, IconButton, TextInput } from '@primer/react'
+import { IconBellFilled, IconPlus, IconSearch, IconUserCircle, IconUserPlus } from '@tabler/icons-react'
+import { Input } from "@/components/ui/input"
+import { Button } from "./ui/button"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+
 
 
 const user = [
@@ -33,17 +34,30 @@ function Navbar() {
         <text>PGMail</text>
       </div>
       <div className='flex w-full max-w-sm items-center space-x-2'>
-        <TextInput
-          leadingVisual={IconSearch}
+        <Input
           aria-label="SerachBar"
           name="SerachBar"
           placeholder="Search"
           autoComplete="SerachBar"
         />
+        <Button variant={"icon"}>
+          <IconSearch />
+        </Button>
+
+
       </div>
       <div className="flex flex-row gap-2 items-center">
-        <IconButton aria-label="Notification" variant="invisible" size="medium" icon={IconBellFilled} />
-        <Avatar size={28} src="https://avatars.githubusercontent.com/primer" />
+        <Button aria-label="Notification" variant="icon">
+          <IconPlus />
+        </Button>
+        <Button aria-label="Notification" variant="icon">
+          <IconBellFilled />
+        </Button>
+        <Avatar>
+          <AvatarImage src="./2c7d99fe281ecd3bcd65ab915bac6dd5.jpeg" />
+          <AvatarFallback>CN</AvatarFallback>
+        </Avatar>
+
       </div>
     </div>
   )
